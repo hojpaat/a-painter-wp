@@ -1,9 +1,9 @@
 import { FC } from "react"
 
-const Services: FC = () => {
+const ServicesPage: FC = () => {
     return (
         <div>Services page</div>
     )
 }
 
-export default Services
+export default ServicesPage

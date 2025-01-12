@@ -1,15 +1,17 @@
-import { useState } from 'react'
 import './App.css'
-import Nav from './components/Nav';
+import ContactsPage from './components/ContactsPage';
+import HomePage from './components/HomePage';
+import NavBar from './components/NavBar';
+import { Outlet, Route, Routes } from 'react-router';
+import ReviewsPage from './components/ReviewsPage';
+import ServicesPage from './components/ServicesPage';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Nav></Nav>
-      <div>Test</div>
-
+      <NavBar></NavBar>
+      <Outlet />
     </>
   )
 }

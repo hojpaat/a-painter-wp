@@ -1,9 +1,9 @@
 import { FC } from "react";
 
-const Contacts: FC = () => {
+const ReviewsPage: FC = () => {
     return (
         <div>Rewviews</div>
     )
 }
 
-export default Contacts;
+export default ReviewsPage;

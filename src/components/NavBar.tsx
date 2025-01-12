@@ -5,7 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 const drawerWidth = 240;
 const navItems = ['Home', 'Services', 'Reviews', 'Contacts'];
 
-export default function Nav() {
+export default function NavBar() {
     // const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
