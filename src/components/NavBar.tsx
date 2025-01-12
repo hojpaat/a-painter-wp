@@ -1,12 +1,20 @@
 import * as React from "react";
 import { AppBar, Box, Button, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
+import { NavLink } from "react-router";
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Services', 'Reviews', 'Contacts'];
+// const navItems = ['Home', 'Services', 'Reviews', 'Contacts'];
+
+const navItems = [
+    { menu: 'Home', path: '/' },
+    { menu: 'Services', path: '/services' },
+    { menu: 'Reviews', path: '/reviews' },
+    { menu: 'Contacts', path: '/contacts' },
+];
+
 
 export default function NavBar() {
-    // const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
@@ -21,9 +29,11 @@ export default function NavBar() {
             <Divider />
             <List>
                 {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
+                    <ListItem key={item.menu} disablePadding>
                         <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText primary={item} />
+                            <NavLink to={item.path} className={({ isActive }) => isActive ? "active" : ""}>
+                                {item.menu}
+                            </NavLink>
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -54,10 +64,12 @@ export default function NavBar() {
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
-                            <Button key={item} sx={{ color: '#fff' }}>
-                                {item}
+                            <Button key={item.menu} sx={{ color: '#fff' }}>
+                                <NavLink to={item.path} className={({ isActive }) => isActive ? "active" : ""}>
+                                    {item.menu}
+                                </NavLink>
                             </Button>
-                        ))}
+                        ))};
                     </Box>
                 </Toolbar>
             </AppBar>
