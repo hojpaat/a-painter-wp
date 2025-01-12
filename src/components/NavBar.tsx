@@ -42,9 +42,15 @@ export default function NavBar() {
     );
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{
+            display: 'flex',
+            bgcolor: '#212121'
+        }}>
             <CssBaseline />
-            <AppBar component="nav">
+            <AppBar component="nav"
+                sx={{
+                    bgcolor: '#212121'
+                }}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -62,14 +68,16 @@ export default function NavBar() {
                     >
                         Cegnev
                     </Typography>
-                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <Box sx={{
+                        display: { xs: 'none', sm: 'block' }
+                    }} className='nav'>
                         {navItems.map((item) => (
-                            <Button key={item.menu} sx={{ color: '#fff' }}>
-                                <NavLink to={item.path} className={({ isActive }) => isActive ? "active" : ""}>
+                            <li>
+                                <NavLink key={item.menu} to={item.path} className={({ isActive }) => isActive ? "active" : ""}>
                                     {item.menu}
                                 </NavLink>
-                            </Button>
-                        ))};
+                            </li>
+                        ))}
                     </Box>
                 </Toolbar>
             </AppBar>
@@ -89,6 +97,6 @@ export default function NavBar() {
                     {drawer}
                 </Drawer>
             </nav>
-        </Box>
+        </Box >
     );
 }

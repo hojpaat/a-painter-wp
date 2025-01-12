@@ -1,21 +1,12 @@
+:root {
+  --nav-hoover-colour: #3E8914;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
@@ -33,36 +24,6 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.MuiBox-root > a > button:hover {
-  /* margin-left: 20px; */
-  background-color: red;
-}
-
-.MuiBox-root > a > button {
-  font-family: 'Titillium Web';
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 600;
-}
-
-
-.MuiBox-root > a.active > button {
-  /* font-size: 1rem; */
-  font-weight: bold;
-}
-
-.MuiAppBar-root {
-  background-color: #212121;
-}
-
 .nav {
   font-family: 'Titillium Web';
   text-transform: uppercase;
@@ -73,4 +34,63 @@
 .nav * {
   box-sizing: border-box;
   transition: all .35s ease;
+}
+
+
+.nav li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: .5em 1em;
+  padding: 0;
+}
+
+.nav a {
+  padding: .5em .8em;
+  color: rgba(255,255,255);
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav a::before,
+.nav a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.nav a::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid var(--nav-hoover-colour);
+  border-right: 3px solid var(--nav-hoover-colour);
+  transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid var(--nav-hoover-colour);
+  border-left: 3px solid var(--nav-hoover-colour);
+  transform: translate(100%, -50%)
+}
+
+.nav a:hover:before,
+.nav a:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.nav a:hover {
+  color: var(--nav-hoover-colour);
+
+}
+
+.nav a.active {
+  color: var(--nav-hoover-colour);
 }
