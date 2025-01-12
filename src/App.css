@@ -40,3 +40,37 @@
 .read-the-docs {
   color: #888;
 }
+
+.MuiBox-root > a > button:hover {
+  /* margin-left: 20px; */
+  background-color: red;
+}
+
+.MuiBox-root > a > button {
+  font-family: 'Titillium Web';
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+.MuiBox-root > a.active > button {
+  /* font-size: 1rem; */
+  font-weight: bold;
+}
+
+.MuiAppBar-root {
+  background-color: #212121;
+}
+
+.nav {
+  font-family: 'Titillium Web';
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+.nav * {
+  box-sizing: border-box;
+  transition: all .35s ease;
+}
