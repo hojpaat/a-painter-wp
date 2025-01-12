@@ -3,7 +3,7 @@ import { AppBar, Box, Button, CssBaseline, Divider, Drawer, IconButton, List, Li
 import MenuIcon from '@mui/icons-material/Menu';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Home', 'Services', 'Reviews', 'Contacts'];
 
 export default function Nav() {
     // const { window } = props;
@@ -16,7 +16,7 @@ export default function Nav() {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
-                MUI
+                Cegnev
             </Typography>
             <Divider />
             <List>
@@ -50,7 +50,7 @@ export default function Nav() {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        MUI
+                        Cegnev
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
