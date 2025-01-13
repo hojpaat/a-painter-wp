@@ -1,8 +1,12 @@
 import { FC } from "react"
+import GalleryCard from "./Gallery/GalleryCard"
 
 const ServicesPage: FC = () => {
     return (
-        <div>Services page</div>
+        <>
+            <div>Services page</div>
+            <GalleryCard />
+        </>
     )
 }
 
