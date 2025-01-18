@@ -1,16 +1,10 @@
-
-.imageTilePic {
-    height: 200px;
-    border-radius: 10px;
-  }
-  
 .imageTile {
     --b: 8px;  /* border thickness*/
     --s: 60px; /* size of the corner*/
     --g: 14px; /* the gap*/
     --c: #000000; 
-    
-    max-height: 245px;
+    width: 250px;
+    height: 250px;
     margin: 5px;
     padding: calc(var(--b) + var(--g));
     background-image:
@@ -25,17 +19,27 @@
     transition: 
       background-position .3s var(--_i,.3s), 
       background-size .3s calc(.3s - var(--_i,.3s));
-  }
-  .imageTile.alt {
-    background-image:
-      conic-gradient(from 180deg at top    var(--b) right var(--b),#0000 25%,var(--c) 0),
-      conic-gradient(from   0deg at bottom var(--b) left  var(--b),#0000 25%,var(--c) 0);
-    background-position:
-      calc(100% - var(--_p,0%)) var(--_p,0%),
-      var(--_p,0%) calc(100% - var(--_p,0%));
-  }
-  .imageTile:hover {
-    background-size: calc(100% - var(--g)) calc(100% - var(--g));
-    --_p: calc(var(--g)/2);
-    --_i: 0s;
-  }
+
+    
+      &.alt {
+          background-image:
+          conic-gradient(from 180deg at top    var(--b) right var(--b),#0000 25%,var(--c) 0),
+          conic-gradient(from   0deg at bottom var(--b) left  var(--b),#0000 25%,var(--c) 0);
+          background-position:
+          calc(100% - var(--_p,0%)) var(--_p,0%),
+          var(--_p,0%) calc(100% - var(--_p,0%));
+        }
+
+    &:hover {
+        background-size: calc(100% - var(--g)) calc(100% - var(--g));
+        --_p: calc(var(--g)/2);
+        --_i: 0s;
+    }
+
+    .imageTilePic {
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
