@@ -6,6 +6,7 @@ import HomePage from './components/HomePage.tsx';
 import ContactsPage from './components/ContactsPage.tsx';
 import ReviewsPage from './components/ReviewsPage.tsx';
 import ServicesPage from './components/ServicesPage.tsx';
+import GalleryComponent from './components/Gallery/Gallery.tsx';
 
 
 const root = document.getElementById('root')!;
@@ -18,6 +19,7 @@ ReactDOM.createRoot(root).render(
         <Route path="services" element={<ServicesPage />} />
         <Route path="reviews" element={<ReviewsPage />} />
         <Route path="contacts" element={<ContactsPage />} />
+        <Route path="gallery" element={<GalleryComponent />} />
         <Route path="*" element={<ContactsPage />} />
       </Route>
     </Routes>

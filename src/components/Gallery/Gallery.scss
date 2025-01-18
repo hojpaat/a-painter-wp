@@ -1,0 +1,12 @@
+.gallery-container {
+    // background-color: aqua;
+    text-align: center;
+    
+    .image-tiles-container{
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: space-evenly;
+        place-items: center;
+    }
+}
