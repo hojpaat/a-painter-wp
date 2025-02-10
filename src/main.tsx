@@ -2,9 +2,9 @@ import './index.css'
 import App from './App.tsx'
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router';
-import HomePage from './components/HomePage.tsx';
-import ContactsPage from './components/ContactsPage.tsx';
-import ReviewsPage from './components/ReviewsPage.tsx';
+import HomePage from './components/homePage/HomePage.tsx';
+import ContactsPage from './components/contacts/ContactsPage.tsx';
+import ReviewsPage from './components/reviews/ReviewsPage.tsx';
 import ServicesPage from './components/ServicesPage.tsx';
 import GalleryComponent from './components/Gallery/Gallery.tsx';
 
