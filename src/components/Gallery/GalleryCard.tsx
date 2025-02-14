@@ -1,5 +1,4 @@
 import { FC } from "react";
-import ImageTile from "./ImageTile";
 import "./GalleryCard.scss"
 
 const GalleryCard: FC = () => {
