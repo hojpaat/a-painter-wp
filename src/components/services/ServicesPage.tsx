@@ -1,5 +1,5 @@
 import { FC } from "react"
-import GalleryCard from "../Gallery/GalleryCard"
+import GalleryCard from "../gallery/GalleryCard"
 
 const ServicesPage: FC = () => {
     return (

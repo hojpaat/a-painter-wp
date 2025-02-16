@@ -6,7 +6,7 @@ import HomePage from './components/homePage/HomePage.tsx';
 import ContactsPage from './components/contacts/ContactsPage.tsx';
 import ReviewsPage from './components/reviews/ReviewsPage.tsx';
 import ServicesPage from './components/services/ServicesPage.tsx';
-import GalleryComponent from './components/Gallery/Gallery.tsx';
+import GalleryComponent from './components/gallery/Gallery.tsx';
 
 
 const root = document.getElementById('root')!;
