@@ -1,9 +1,8 @@
 import * as React from "react";
-import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemButton, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemText, ListItemButton, Toolbar, Typography, Button } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-import { NavLink } from "react-router";
 
-const drawerWidth = 240;
+// const drawerWidth = 240;
 // const navItems = ['Home', 'Services', 'Reviews', 'Contacts'];
 
 const navItems = [
@@ -14,7 +13,11 @@ const navItems = [
 ];
 
 
-export default function NavBar() {
+const drawerWidth = 240;
+// const navItems = ['Home', 'About', 'Contact'];
+
+export default function DrawerAppBar(props: Props) {
+    const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
@@ -24,16 +27,14 @@ export default function NavBar() {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
-                Cegnev
+                MUI
             </Typography>
             <Divider />
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item.menu} disablePadding>
                         <ListItemButton sx={{ textAlign: 'center' }}>
-                            <NavLink to={item.path} className={({ isActive }) => isActive ? "active" : ""}>
-                                {item.menu}
-                            </NavLink>
+                            <ListItemText primary={item.menu} />
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -41,16 +42,16 @@ export default function NavBar() {
         </Box>
     );
 
+    const container = window !== undefined ? () => window().document.body : undefined;
+
     return (
-        <Box sx={{
-            display: 'flex',
-            bgcolor: '#212121'
-        }}>
+        <Box sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar component="nav"
                 sx={{
-                    bgcolor: '#212121'
-                }}>
+                    backgroundColor: '#000',
+                }}
+            >
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -64,25 +65,22 @@ export default function NavBar() {
                     <Typography
                         variant="h6"
                         component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, fontFamily: 'Titillium Web', fontSize: '24px' }}
                     >
-                        Cegnev
+                        Company Name
                     </Typography>
-                    <Box sx={{
-                        display: { xs: 'none', sm: 'block' }
-                    }} className='nav'>
+                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
-                            <li>
-                                <NavLink key={item.menu} to={item.path} className={({ isActive }) => isActive ? "active" : ""}>
-                                    {item.menu}
-                                </NavLink>
-                            </li>
+                            <Button key={item.menu} sx={{ color: '#fff', fontFamily: 'Titillium Web', fontSize: '18px' }}>
+                                {item.menu}
+                            </Button>
                         ))}
                     </Box>
                 </Toolbar>
             </AppBar>
             <nav>
                 <Drawer
+                    container={container}
                     variant="temporary"
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
