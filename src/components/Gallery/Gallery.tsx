@@ -8,19 +8,6 @@ const GalleryComponent: FC = () => {
             <div className="images-container">
                 <ImageTile key="firt" />
                 <ImageTile key="second" />
-                <ImageTile key="second" />
-                <ImageTile key="second" />
-                <ImageTile key="second" />
-                <ImageTile key="second" />
-                <ImageTile key="second" />
-                <ImageTile key="second" />
-                <ImageTile key="second" />
-                <ImageTile key="second" />
-                <ImageTile key="second" />
-                <ImageTile key="second" />
-                <ImageTile key="second" />
-                <ImageTile key="second" />
-                <ImageTile key="second" />
             </div>
         </div>
     )
