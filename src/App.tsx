@@ -8,7 +8,7 @@ function App() {
     <>
       <NavBar></NavBar>
       <div className='test'>
-        <Outlet />
+        {/* <Outlet /> */}
       </div>
     </>
   )
