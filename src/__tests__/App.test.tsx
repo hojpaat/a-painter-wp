@@ -2,7 +2,6 @@
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react';
 import App from '../App';
-import React from 'react';
 // import { createRoutesStub } from "react-router";
 
 // const Stub = createRoutesStub([

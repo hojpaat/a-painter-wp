@@ -1,3 +1,4 @@
+//@ts-noCheck
 const NavMenu = () => {
     const navItems = [
         { menu: 'Home', path: '/' },

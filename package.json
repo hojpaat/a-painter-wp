@@ -2,6 +2,7 @@
   "name": "a-painter-wp",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://hojpaat.github.io/a-painter-wp/",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +11,7 @@
     "preview": "vite preview",
     "test": "jest",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
