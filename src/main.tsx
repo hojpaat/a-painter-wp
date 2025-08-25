@@ -1,7 +1,7 @@
 import './index.css'
 import App from './App.tsx'
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router';
 import HomePage from './components/homePage/HomePage.tsx';
 import ContactsPage from './components/contacts/ContactsPage.tsx';
 import ReviewsPage from './components/reviews/ReviewsPage.tsx';
@@ -12,7 +12,7 @@ import GalleryComponent from './components/gallery/Gallery.tsx';
 const root = document.getElementById('root')!;
 
 ReactDOM.createRoot(root).render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<HomePage />} />
@@ -23,7 +23,7 @@ ReactDOM.createRoot(root).render(
         <Route path="*" element={<ContactsPage />} />
       </Route>
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 
 )
 
