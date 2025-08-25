@@ -1,6 +1,6 @@
 {
   "name": "a-painter-wp",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "homepage": "https://hojpaat.github.io/a-painter-wp/",
   "type": "module",

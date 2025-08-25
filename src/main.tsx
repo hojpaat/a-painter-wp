@@ -12,7 +12,7 @@ import GalleryComponent from './components/gallery/Gallery.tsx';
 const root = document.getElementById('root')!;
 
 ReactDOM.createRoot(root).render(
-  <HashRouter>
+  <HashRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<HomePage />} />
